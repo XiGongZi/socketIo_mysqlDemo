@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Its U !!!</title>
+    </head>
+    <script src="./jquery.js"></script>
+    <body>
+        <input type="text" id="btn1">
+        <!-- <button>food</button> -->
+        <button id="btn2">send message</button>
+    </body>
+    <script>
+        let btn1 = document.getElementById('btn1');
+        let btn2 = document.getElementById('btn2');
+
+        btn2.addEventListener('click', function() {
+            var a = [
+		{
+			"add":"./static/image/banner_1.jpg",		
+			"mainColor":"#C6BDca"
+		}
+        ];
+        var b = ["#C6BDBB"];
+        console.log(JSON.stringify(a));
+            $.post("http://127.0.0.1:3000/",'name=' + JSON.stringify(a));
+        });
+
+    </script>
+</html>
